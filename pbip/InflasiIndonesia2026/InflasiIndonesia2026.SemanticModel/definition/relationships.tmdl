@@ -1,0 +1,49 @@
+relationship ab12d2ea-03f7-58e2-aa83-c39cb59198a9
+	fromColumn: fact_inflasi_bulanan.bulan_key
+	toColumn: dim_bulan.bulan_key
+	crossFilteringBehavior: oneDirection
+
+relationship 90dbf1df-179b-5724-acd8-79a793900e57
+	fromColumn: fact_inflasi_bulanan.tahun_id
+	toColumn: dim_tahun.tahun_id
+	crossFilteringBehavior: oneDirection
+
+relationship 309cbd1f-421e-5f8a-b645-bcb31605fcdd
+	fromColumn: fact_inflasi_kelompok.bulan_key
+	toColumn: dim_bulan.bulan_key
+	crossFilteringBehavior: oneDirection
+
+relationship 3840682a-7656-59bf-bc8a-5b8383844f4b
+	fromColumn: fact_inflasi_kelompok.kelompok_id
+	toColumn: dim_kelompok.kelompok_id
+	crossFilteringBehavior: oneDirection
+
+relationship 7c43c567-ccef-5640-b3b7-3724fe95b679
+	fromColumn: fact_inflasi_komponen.bulan_key
+	toColumn: dim_bulan.bulan_key
+	crossFilteringBehavior: oneDirection
+
+relationship 54c25ce2-a499-5780-8f20-09f92f9c6dd4
+	fromColumn: fact_inflasi_komponen.komponen_id
+	toColumn: dim_komponen.komponen_id
+	crossFilteringBehavior: oneDirection
+
+relationship e366d3e0-c7f5-56fc-8177-28c805400f45
+	fromColumn: fact_inflasi_kota.kota_id
+	toColumn: dim_kota.kota_id
+	crossFilteringBehavior: oneDirection
+
+relationship 9f31ec58-a5b5-5c01-898e-0c1ae05ff438
+	fromColumn: fact_inflasi_kota.bulan_key
+	toColumn: dim_bulan.bulan_key
+	crossFilteringBehavior: oneDirection
+
+relationship 897198e6-dc77-5873-9293-4d2066cc2d1a
+	fromColumn: fact_inflasi_provinsi.provinsi_id
+	toColumn: dim_provinsi.provinsi_id
+	crossFilteringBehavior: oneDirection
+
+relationship 9b097da6-a2b6-5031-99b7-6f8990bfebd4
+	fromColumn: fact_inflasi_provinsi.bulan_key
+	toColumn: dim_bulan.bulan_key
+	crossFilteringBehavior: oneDirection
