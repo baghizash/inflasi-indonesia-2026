@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v05Card",
+  "position": {
+    "x": 960,
+    "y": 76,
+    "z": 4,
+    "height": 110,
+    "width": 300,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inflasi_provinsi"
+                    }
+                  },
+                  "Property": "Provinsi YoY Tertinggi"
+                }
+              },
+              "queryRef": "fact_inflasi_provinsi.Provinsi YoY Tertinggi",
+              "nativeQueryRef": "Provinsi YoY Tertinggi"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Provinsi Tertinggi (Sulawesi Utara)'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
