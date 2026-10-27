@@ -1,0 +1,54 @@
+table dim_bulan
+	lineageTag: 7e735a33-b701-5b5e-bb30-71dc6e3ec649
+
+	column bulan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: c1d8bf15-fd03-5b47-8e10-c17fae6457b8
+		summarizeBy: none
+		sourceColumn: bulan_key
+
+	column periode
+		dataType: string
+		lineageTag: edbc6494-588d-5d6b-a050-60b448553b66
+		sortByColumn: bulan_key
+		summarizeBy: none
+		sourceColumn: periode
+
+	column tahun
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e938660-426f-5ab8-98b4-94f081757065
+		summarizeBy: none
+		sourceColumn: tahun
+
+	column bulan
+		dataType: int64
+		formatString: 0
+		lineageTag: 7324ed32-3e69-5f30-a9a5-c174079b7e4a
+		summarizeBy: none
+		sourceColumn: bulan
+
+	column nama_bulan
+		dataType: string
+		lineageTag: 13a26429-1bf8-5b8b-8bd7-0b08abcdb17c
+		summarizeBy: none
+		sourceColumn: nama_bulan
+
+	column label
+		dataType: string
+		lineageTag: 89123ffb-92dd-5213-a5e4-9d1128ed5500
+		sortByColumn: bulan_key
+		summarizeBy: none
+		sourceColumn: label
+
+	partition dim_bulan = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\dim_bulan.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"bulan_key", Int64.Type}, {"periode", type text}, {"tahun", Int64.Type}, {"bulan", Int64.Type}, {"nama_bulan", type text}, {"label", type text}})
+				in
+					ChangedType
+				```
