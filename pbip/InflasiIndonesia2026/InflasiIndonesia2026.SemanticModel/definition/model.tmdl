@@ -1,0 +1,19 @@
+model Model
+	culture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+ref table dim_bulan
+ref table dim_tahun
+ref table dim_kelompok
+ref table dim_komponen
+ref table dim_kota
+ref table dim_provinsi
+ref table fact_inflasi_bulanan
+ref table fact_inflasi_kelompok
+ref table fact_inflasi_komponen
+ref table fact_inflasi_kota
+ref table fact_inflasi_provinsi
+
+ref expression FolderData
