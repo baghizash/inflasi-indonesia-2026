@@ -1,0 +1,26 @@
+table dim_kelompok
+	lineageTag: abfe86d1-3299-5b12-9c77-7c9861be04b9
+
+	column kelompok_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e0c63009-4ced-57c5-be1f-de0ea338747a
+		summarizeBy: none
+		sourceColumn: kelompok_id
+
+	column kelompok
+		dataType: string
+		lineageTag: 1d883bb5-bda6-5012-88ea-2b485161bdef
+		summarizeBy: none
+		sourceColumn: kelompok
+
+	partition dim_kelompok = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\dim_kelompok.csv"), [Delimiter = ",", Columns = 2, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"kelompok_id", Int64.Type}, {"kelompok", type text}})
+				in
+					ChangedType
+				```
