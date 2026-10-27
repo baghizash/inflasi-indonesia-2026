@@ -1,0 +1,26 @@
+table dim_kota
+	lineageTag: 862ee637-ea99-5f73-bfe2-e71e6c478c77
+
+	column kota_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 24e837fe-6e20-5bee-b88b-d7ffbd0b58e6
+		summarizeBy: none
+		sourceColumn: kota_id
+
+	column kabupaten_kota
+		dataType: string
+		lineageTag: f0566e12-2624-5ac7-ab0c-e7dd7baa1bc6
+		summarizeBy: none
+		sourceColumn: kabupaten_kota
+
+	partition dim_kota = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\dim_kota.csv"), [Delimiter = ",", Columns = 2, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"kota_id", Int64.Type}, {"kabupaten_kota", type text}})
+				in
+					ChangedType
+				```
