@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/platform/platformProperties/1.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "InflasiIndonesia2026"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "08b95035-e84a-55dc-ba04-0172f060366f"
+  }
+}
