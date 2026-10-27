@@ -1,0 +1,26 @@
+table dim_komponen
+	lineageTag: 4bcac7a3-e6ae-512a-b5c4-87bf188e505d
+
+	column komponen_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 71ad31c7-2360-5855-bcdb-d6e2d4673f1e
+		summarizeBy: none
+		sourceColumn: komponen_id
+
+	column komponen
+		dataType: string
+		lineageTag: 90b6dd96-ebc5-5fcb-ab0e-ea986474906d
+		summarizeBy: none
+		sourceColumn: komponen
+
+	partition dim_komponen = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\dim_komponen.csv"), [Delimiter = ",", Columns = 2, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"komponen_id", Int64.Type}, {"komponen", type text}})
+				in
+					ChangedType
+				```
