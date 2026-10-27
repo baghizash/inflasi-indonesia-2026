@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
+  "pageOrder": [
+    "pg01Ringkasan",
+    "pg02KomponenKelompok",
+    "pg03Wilayah",
+    "pg04Sejarah"
+  ],
+  "activePageName": "pg01Ringkasan"
+}
