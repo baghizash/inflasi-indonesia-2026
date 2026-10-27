@@ -1,0 +1,26 @@
+table dim_provinsi
+	lineageTag: 15059529-0673-57e4-afcd-acb55ab80f0f
+
+	column provinsi_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ce7c6acf-dab4-5df2-8328-180f229ceee2
+		summarizeBy: none
+		sourceColumn: provinsi_id
+
+	column provinsi
+		dataType: string
+		lineageTag: 71df3102-74d2-5cbf-866f-19008322d87b
+		summarizeBy: none
+		sourceColumn: provinsi
+
+	partition dim_provinsi = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\dim_provinsi.csv"), [Delimiter = ",", Columns = 2, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"provinsi_id", Int64.Type}, {"provinsi", type text}})
+				in
+					ChangedType
+				```
