@@ -1,0 +1,53 @@
+periode,kelompok,ihk,mtm_persen,ytd_persen,yoy_persen,andil_mtm,andil_yoy
+2022-09,"Informasi, Komunikasi, dan Jasa Keuangan",,-0.03,,,,
+2022-09,Kesehatan,,0.57,,,,
+2022-09,"Makanan, Minuman, dan Tembakau",,-0.3,,,,
+2022-09,Pakaian dan Alas Kaki,,0.2,,,,
+2022-09,Pendidikan,,0.21,,,,
+2022-09,Penyediaan Makanan dan Minuman/Restoran,,0.57,,,,
+2022-09,Perawatan Pribadi dan Jasa Lainnya,,0.28,,,,
+2022-09,"Perlengkapan, Peralatan, dan Pemeliharaan Rutin Rumah Tangga",,0.35,,,,
+2022-09,"Perumahan, Air, Listrik, dan Bahan Bakar Rumah Tangga",,0.16,,,,
+2022-09,"Rekreasi, Olahraga, dan Budaya",,0.31,,,,
+2022-09,Transportasi,,8.88,,,,
+2023-12,"Makanan, Minuman, dan Tembakau",,,,6.18,,1.6
+2025-11,"Informasi, Komunikasi, dan Jasa Keuangan",99.23,-0.02,-0.25,-0.25,0.0,-0.01
+2025-11,Kesehatan,106.45,0.12,1.73,2.09,0.01,0.06
+2025-11,"Makanan, Minuman, dan Tembakau",113.59,0.06,2.88,4.25,0.02,1.22
+2025-11,Pakaian dan Alas Kaki,104.06,0.03,0.66,0.76,0.0,0.04
+2025-11,Pendidikan,106.19,0.0,1.21,1.26,0.0,0.07
+2025-11,Penyediaan Makanan dan Minuman/Restoran,108.06,0.06,1.33,1.5,0.01,0.15
+2025-11,Perawatan Pribadi dan Jasa Lainnya,127.04,1.21,12.21,12.49,0.09,0.82
+2025-11,"Perlengkapan, Peralatan, dan Pemeliharaan Rutin Rumah Tangga",104.08,0.03,0.2,0.23,0.0,0.01
+2025-11,"Perumahan, Air, Listrik, dan Bahan Bakar Rumah Tangga",104.2,0.02,1.56,1.57,0.0,0.25
+2025-11,"Rekreasi, Olahraga, dan Budaya",105.37,0.02,1.06,1.15,0.0,0.02
+2025-11,Transportasi,110.22,0.34,0.68,0.71,0.04,0.09
+2025-12,"Informasi, Komunikasi, dan Jasa Keuangan",,,,,,-0.02
+2025-12,"Makanan, Minuman, dan Tembakau",,,,4.58,,1.33
+2026-02,"Informasi, Komunikasi, dan Jasa Keuangan",99.32,0.11,0.12,-0.09,0.01,0.0
+2026-02,Kesehatan,106.93,0.16,0.36,1.61,0.0,0.05
+2026-02,"Makanan, Minuman, dan Tembakau",116.04,1.54,0.49,3.51,0.45,1.05
+2026-02,Pakaian dan Alas Kaki,104.25,0.18,0.18,0.73,0.01,0.04
+2026-02,Pendidikan,106.24,0.01,0.04,1.11,0.0,0.06
+2026-02,Penyediaan Makanan dan Minuman/Restoran,108.61,0.18,0.38,1.37,0.02,0.14
+2026-02,Perawatan Pribadi dan Jasa Lainnya,134.59,2.55,4.89,16.66,0.19,1.12
+2026-02,"Perlengkapan, Peralatan, dan Pemeliharaan Rutin Rumah Tangga",104.23,0.05,0.14,0.21,0.0,0.01
+2026-02,"Perumahan, Air, Listrik, dan Bahan Bakar Rumah Tangga",104.4,0.08,0.13,16.19,0.01,2.26
+2026-02,"Rekreasi, Olahraga, dan Budaya",105.59,0.02,0.1,0.96,0.0,0.02
+2026-02,Transportasi,110.2,-0.11,-0.57,0.12,-0.01,0.01
+2026-03,"Makanan, Minuman, dan Tembakau",,,,3.34,,0.99
+2026-03,Perawatan Pribadi dan Jasa Lainnya,,,,15.32,,1.02
+2026-03,"Perumahan, Air, Listrik, dan Bahan Bakar Rumah Tangga",,,,7.24,,1.08
+2026-04,"Makanan, Minuman, dan Tembakau",,-0.2,,,-0.06,
+2026-04,Transportasi,,0.99,,,0.12,
+2026-09,"Informasi, Komunikasi, dan Jasa Keuangan",101.04,0.12,1.85,1.83,0.01,0.11
+2026-09,Kesehatan,108.43,0.26,1.76,2.24,0.01,0.07
+2026-09,"Makanan, Minuman, dan Tembakau",118.39,0.88,2.53,4.37,0.26,1.28
+2026-09,Pakaian dan Alas Kaki,105.28,0.03,1.17,1.2,0.0,0.06
+2026-09,Pendidikan,107.56,0.24,1.28,1.43,0.01,0.08
+2026-09,Penyediaan Makanan dan Minuman/Restoran,110.84,0.11,2.44,2.7,0.01,0.27
+2026-09,Perawatan Pribadi dan Jasa Lainnya,131.27,-0.14,2.31,7.77,-0.01,0.53
+2026-09,"Perlengkapan, Peralatan, dan Pemeliharaan Rutin Rumah Tangga",106.34,0.18,2.17,2.19,0.01,0.11
+2026-09,"Perumahan, Air, Listrik, dan Bahan Bakar Rumah Tangga",105.21,0.04,0.91,1.02,0.0,0.16
+2026-09,"Rekreasi, Olahraga, dan Budaya",107.08,0.07,1.52,1.81,0.0,0.03
+2026-09,Transportasi,115.05,0.03,3.81,4.84,0.0,0.58
