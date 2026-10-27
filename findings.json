@@ -1,0 +1,262 @@
+{
+  "terbaru": {
+    "periode": "September 2026",
+    "yoy": 3.28,
+    "mtm": 0.3,
+    "ytd": 2.17,
+    "ihk": 112.31,
+    "basis_ihk": "2022=100",
+    "yoy_bulan_lalu": 3.19
+  },
+  "cakupan": {
+    "bulan_total": 93,
+    "rentang": "Januari 2019 – September 2026",
+    "yoy_terisi": 53,
+    "mtm_terisi": 56,
+    "yoy_kontinu": "Januari 2023 – September 2026 (45 bulan)",
+    "kota_sep2026": 150,
+    "provinsi_sep2026": 38
+  },
+  "deflasi": {
+    "jumlah_bulan_teramati": 11,
+    "terburuk": {
+      "periode": "2025-02",
+      "mtm": -0.48
+    },
+    "daftar": [
+      {
+        "periode": "2025-02",
+        "mtm": -0.48
+      },
+      {
+        "periode": "2019-09",
+        "mtm": -0.27
+      },
+      {
+        "periode": "2024-07",
+        "mtm": -0.18
+      },
+      {
+        "periode": "2026-01",
+        "mtm": -0.15
+      },
+      {
+        "periode": "2024-09",
+        "mtm": -0.12
+      },
+      {
+        "periode": "2022-10",
+        "mtm": -0.11
+      },
+      {
+        "periode": "2020-07",
+        "mtm": -0.1
+      },
+      {
+        "periode": "2019-02",
+        "mtm": -0.08
+      },
+      {
+        "periode": "2020-08",
+        "mtm": -0.05
+      },
+      {
+        "periode": "2020-09",
+        "mtm": -0.05
+      },
+      {
+        "periode": "2023-08",
+        "mtm": -0.02
+      }
+    ],
+    "covid_2020": [
+      {
+        "periode": "2020-07",
+        "mtm": -0.1
+      },
+      {
+        "periode": "2020-08",
+        "mtm": -0.05
+      },
+      {
+        "periode": "2020-09",
+        "mtm": -0.05
+      }
+    ]
+  },
+  "puncak": {
+    "periode": "2022-09",
+    "yoy": 5.95,
+    "mtm_saat_puncak": 1.17,
+    "catatan": "Bulan yang sama dengan kenaikan harga BBM bersubsidi (3 September 2022); kelompok Transportasi naik 8,88% mtm pada bulan itu."
+  },
+  "inflasi_tahunan_desember": {
+    "2019": 2.72,
+    "2020": 1.68,
+    "2021": 1.87,
+    "2022": 5.51,
+    "2023": 2.61,
+    "2024": 1.57,
+    "2025": 2.92
+  },
+  "rata_rata_yoy_per_tahun": {
+    "2023": 3.69,
+    "2024": 2.3,
+    "2025": 1.91,
+    "2026": 3.33
+  },
+  "pita_target_bi": {
+    "sasaran": "2,5% ± 1% (rentang 1,5% – 3,5%)",
+    "jendela": "Oktober 2024 – September 2026 (24 bulan)",
+    "di_dalam": 19,
+    "di_bawah": 3,
+    "di_atas": 2,
+    "bulan_di_bawah": [
+      "2025-01",
+      "2025-02",
+      "2025-03"
+    ],
+    "bulan_di_atas": [
+      "2026-01",
+      "2026-02"
+    ]
+  },
+  "kemusiman_mtm": {
+    "rata_rata_per_bulan": {
+      "1": 0.19,
+      "2": 0.15,
+      "3": 0.5,
+      "4": 0.24,
+      "5": 0.28,
+      "6": 0.29,
+      "7": 0.06,
+      "8": 0.02,
+      "9": 0.2,
+      "10": 0.09,
+      "11": 0.21,
+      "12": 0.5
+    },
+    "n_observasi": {
+      "1": 5,
+      "2": 6,
+      "3": 6,
+      "4": 4,
+      "5": 3,
+      "6": 3,
+      "7": 4,
+      "8": 3,
+      "9": 7,
+      "10": 5,
+      "11": 5,
+      "12": 5
+    },
+    "bulan_tertinggi": 12,
+    "bulan_terendah": 8
+  },
+  "komponen_sep2026": {
+    "Inflasi Inti": {
+      "yoy": 2.84,
+      "mtm": 0.1,
+      "andil_yoy": 1.82
+    },
+    "Harga Bergejolak": {
+      "yoy": 5.03,
+      "mtm": 1.46,
+      "andil_yoy": 0.83
+    },
+    "Harga Diatur Pemerintah": {
+      "yoy": 3.25,
+      "mtm": 0.0,
+      "andil_yoy": 0.63
+    },
+    "Energi": {
+      "yoy": 3.28,
+      "mtm": 0.09,
+      "andil_yoy": 0.37
+    },
+    "Bahan Makanan": {
+      "yoy": 4.98,
+      "mtm": 1.17,
+      "andil_yoy": 1.02
+    }
+  },
+  "komponen_feb2026": {
+    "perumahan_yoy": 16.19,
+    "catatan": "Lonjakan kelompok Perumahan Feb 2026 (yoy 16,19%) adalah efek basis rendah diskon tarif listrik Jan–Feb 2025 (tarif listrik yoy +86,96%)."
+  },
+  "kelompok_sep2026": {
+    "andil_terbesar": [
+      {
+        "kelompok": "Makanan, Minuman, dan Tembakau",
+        "yoy": 4.37,
+        "andil_yoy": 1.28
+      },
+      {
+        "kelompok": "Transportasi",
+        "yoy": 4.84,
+        "andil_yoy": 0.58
+      },
+      {
+        "kelompok": "Perawatan Pribadi dan Jasa Lainnya",
+        "yoy": 7.77,
+        "andil_yoy": 0.53
+      }
+    ],
+    "yoy_tertinggi": {
+      "kelompok": "Perawatan Pribadi dan Jasa Lainnya",
+      "yoy": 7.77
+    }
+  },
+  "kelompok_makanan": {
+    "andil_des2023": 1.6,
+    "andil_des2025": 1.33,
+    "andil_sep2026": 1.28,
+    "yoy_sep2026": 4.37,
+    "catatan": "Kelompok Makanan, Minuman, dan Tembakau adalah penyumbang andil yoy terbesar pada Des 2023, Des 2025, dan Sep 2026."
+  },
+  "transportasi_sep2022_mtm": 8.88,
+  "kota_sep2026": {
+    "tertinggi": {
+      "kota": "Kab Minahasa Utara",
+      "yoy": 9.05
+    },
+    "terendah": {
+      "kota": "Kab Timor Tengah Selatan",
+      "yoy": 1.04
+    },
+    "rentang_poin": 8.01,
+    "di_atas_nasional": 92,
+    "median_yoy": 3.59,
+    "rata_rata_yoy": 3.76,
+    "deflasi_mtm": 9
+  },
+  "provinsi_sep2026": {
+    "tertinggi": {
+      "provinsi": "Sulawesi Utara",
+      "yoy": 7.59
+    },
+    "terendah": {
+      "provinsi": "Sumatera Selatan",
+      "yoy": 2.55
+    },
+    "rentang_poin": 5.04
+  },
+  "komoditas_sep2026": {
+    "andil_mtm_teratas": {
+      "cabai rawit": 0.08,
+      "cabai merah": 0.06,
+      "daging ayam ras": 0.05,
+      "beras": 0.03,
+      "telur ayam ras": 0.02
+    },
+    "andil_yoy_teratas": {
+      "emas perhiasan": 0.44,
+      "bensin": 0.31,
+      "beras": 0.23,
+      "ikan segar": 0.17,
+      "daging ayam ras": 0.17
+    },
+    "sumber": "Tabel 10 BRS September 2026",
+    "tautan_pangan": "Cabai kembali menjadi penggerak: dua dari lima penyumbang andil mtm terbesar Sep 2026 adalah cabai rawit dan cabai merah, dan pada Des 2023 andil yoy cabai merah (0,24) + cabai rawit (0,10) termasuk yang terbesar — pola yang sama terlihat pada proyek Harga Cabai dan Harga Pangan: gejolak harga pangan segar adalah sumber volatilitas inflasi yang berulang."
+  }
+}
