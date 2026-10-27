@@ -1,0 +1,164 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "dim_bulan",
+          "nodeLineageTag": "7e735a33-b701-5b5e-bb30-71dc6e3ec649",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 300,
+            "y": 0
+          },
+          "nodeIndex": "dim_tahun",
+          "nodeLineageTag": "07af42cb-4dc0-534e-ba8b-c023cd5b3e4c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 600,
+            "y": 0
+          },
+          "nodeIndex": "dim_kelompok",
+          "nodeLineageTag": "abfe86d1-3299-5b12-9c77-7c9861be04b9",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 260
+          },
+          "nodeIndex": "dim_komponen",
+          "nodeLineageTag": "4bcac7a3-e6ae-512a-b5c4-87bf188e505d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 300,
+            "y": 260
+          },
+          "nodeIndex": "dim_kota",
+          "nodeLineageTag": "862ee637-ea99-5f73-bfe2-e71e6c478c77",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 600,
+            "y": 260
+          },
+          "nodeIndex": "dim_provinsi",
+          "nodeLineageTag": "15059529-0673-57e4-afcd-acb55ab80f0f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 520
+          },
+          "nodeIndex": "fact_inflasi_bulanan",
+          "nodeLineageTag": "a7015b7c-a5e2-589f-bfa6-3bf4c5bbd526",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 300,
+            "y": 520
+          },
+          "nodeIndex": "fact_inflasi_kelompok",
+          "nodeLineageTag": "d34d2566-5726-5f1e-b982-1263594dc5bf",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 600,
+            "y": 520
+          },
+          "nodeIndex": "fact_inflasi_komponen",
+          "nodeLineageTag": "2fa64c07-ae78-5401-8438-7cc8fafc32ff",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 780
+          },
+          "nodeIndex": "fact_inflasi_kota",
+          "nodeLineageTag": "6069681a-139d-52fd-b58f-62e018e86563",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 300,
+            "y": 780
+          },
+          "nodeIndex": "fact_inflasi_provinsi",
+          "nodeLineageTag": "2a3de9cb-82df-5fcd-9d4c-aabba576bc5e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 10
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFields": [],
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
