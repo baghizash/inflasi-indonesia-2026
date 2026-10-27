@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/platform/platformProperties/1.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "InflasiIndonesia2026"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bd0d70db-9ea4-5769-9f8d-679f1682556a"
+  }
+}
