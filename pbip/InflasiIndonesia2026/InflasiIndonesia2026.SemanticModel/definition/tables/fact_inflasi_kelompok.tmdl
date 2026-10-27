@@ -1,0 +1,79 @@
+table fact_inflasi_kelompok
+	lineageTag: d34d2566-5726-5f1e-b982-1263594dc5bf
+
+	measure 'Inflasi YoY Kelompok' =
+			AVERAGE ( fact_inflasi_kelompok[yoy_persen] )
+		formatString: 0.00
+		lineageTag: accd0307-ef66-5651-ba40-318683104571
+
+	measure 'Andil YoY Kelompok' =
+			AVERAGE ( fact_inflasi_kelompok[andil_yoy] )
+		formatString: 0.00
+		lineageTag: a6ab0e2e-e517-50e2-85c0-0a11d82cb711
+
+	column bulan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 01cda165-3f31-58ab-90c5-bb2d21bcdd05
+		summarizeBy: none
+		sourceColumn: bulan_key
+
+	column kelompok_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a9c786a-f662-51d6-ab84-2293841a5e12
+		summarizeBy: none
+		sourceColumn: kelompok_id
+
+	column ihk
+		dataType: double
+		formatString: 0.00
+		lineageTag: debfa29b-8add-5d93-a8cb-f9cf83c16239
+		summarizeBy: none
+		sourceColumn: ihk
+
+	column mtm_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: cdbd1b0b-94f9-5d78-899b-1b0c78d8a9e4
+		summarizeBy: none
+		sourceColumn: mtm_persen
+
+	column ytd_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: bffdd384-5ac4-5b5f-8a3b-247f0d6fc877
+		summarizeBy: none
+		sourceColumn: ytd_persen
+
+	column yoy_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: be5424e6-b73f-5874-a88b-b7b55699324f
+		summarizeBy: none
+		sourceColumn: yoy_persen
+
+	column andil_mtm
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4844310f-9e3c-52dd-b123-70139bff3145
+		summarizeBy: none
+		sourceColumn: andil_mtm
+
+	column andil_yoy
+		dataType: double
+		formatString: 0.00
+		lineageTag: c07d976b-9836-5bdd-ac0e-a118b0b986cd
+		summarizeBy: none
+		sourceColumn: andil_yoy
+
+	partition fact_inflasi_kelompok = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\fact_inflasi_kelompok.csv"), [Delimiter = ",", Columns = 8, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"bulan_key", Int64.Type}, {"kelompok_id", Int64.Type}, {"ihk", type number}, {"mtm_persen", type number}, {"ytd_persen", type number}, {"yoy_persen", type number}, {"andil_mtm", type number}, {"andil_yoy", type number}})
+				in
+					ChangedType
+				```
