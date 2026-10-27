@@ -1,0 +1,24 @@
+{
+  "name": "CY24SU10",
+  "dataColors": [
+    "#14406B",
+    "#D62828",
+    "#F2C14E",
+    "#2A9D8F",
+    "#7FB0D9",
+    "#26313B",
+    "#744EC2",
+    "#D64550",
+    "#197278",
+    "#1AAB40",
+    "#15C6F4",
+    "#4092FF",
+    "#FF9B85",
+    "#FFC36D",
+    "#A0D8EF",
+    "#5E4B8B"
+  ],
+  "background": "#FAF6EF",
+  "foreground": "#26313B",
+  "tableAccent": "#14406B"
+}
