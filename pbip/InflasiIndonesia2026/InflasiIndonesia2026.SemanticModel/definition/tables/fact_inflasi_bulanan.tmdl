@@ -1,0 +1,107 @@
+table fact_inflasi_bulanan
+	lineageTag: a7015b7c-a5e2-589f-bfa6-3bf4c5bbd526
+
+	measure 'Inflasi YoY' =
+			AVERAGE ( fact_inflasi_bulanan[yoy_persen] )
+		formatString: 0.00
+		lineageTag: 209b5c12-8568-5cfd-ad08-f5019d751bc7
+
+	measure 'Inflasi MtM' =
+			AVERAGE ( fact_inflasi_bulanan[mtm_persen] )
+		formatString: 0.00
+		lineageTag: 984034e7-a143-5ff8-bb8c-bdfb03ec1754
+
+	measure 'IHK' =
+			AVERAGE ( fact_inflasi_bulanan[ihk] )
+		formatString: 0.00
+		lineageTag: ca4fa7a1-c955-5919-bbe5-748e89ffa1bd
+
+	measure 'Inflasi YoY Terbaru' = ```
+			VAR KunciTerbaru =
+			    MAX ( fact_inflasi_bulanan[bulan_key] )
+			RETURN
+			    CALCULATE ( [Inflasi YoY], fact_inflasi_bulanan[bulan_key] = KunciTerbaru )
+			```
+		formatString: 0.00
+		lineageTag: 44347fd4-d075-5fbe-a7a8-ef217688ba85
+
+	measure 'Inflasi MtM Terbaru' = ```
+			VAR KunciTerbaru =
+			    MAX ( fact_inflasi_bulanan[bulan_key] )
+			RETURN
+			    CALCULATE ( [Inflasi MtM], fact_inflasi_bulanan[bulan_key] = KunciTerbaru )
+			```
+		formatString: 0.00
+		lineageTag: fa3c8d50-27c9-5005-b7cc-6eb1394472b9
+
+	measure 'IHK Terbaru' = ```
+			VAR KunciTerbaru =
+			    MAX ( fact_inflasi_bulanan[bulan_key] )
+			RETURN
+			    CALCULATE ( [IHK], fact_inflasi_bulanan[bulan_key] = KunciTerbaru )
+			```
+		formatString: 0.00
+		lineageTag: 9eb17e85-e16f-5a87-9714-b27dfef96d26
+
+	measure 'Puncak Inflasi YoY' =
+			MAX ( fact_inflasi_bulanan[yoy_persen] )
+		formatString: 0.00
+		lineageTag: e1a3d85f-260e-57bd-9442-df4c4f443c0e
+
+	measure 'Jumlah Bulan Deflasi' =
+			CALCULATE ( COUNTROWS ( fact_inflasi_bulanan ), fact_inflasi_bulanan[mtm_persen] < 0 )
+		formatString: 0
+		lineageTag: bec46a67-77f1-5683-8667-c8ae2ace631e
+
+	column bulan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 9cab0fdc-a823-553a-b49a-435c337e2a5b
+		summarizeBy: none
+		sourceColumn: bulan_key
+
+	column tahun_id
+		dataType: int64
+		formatString: 0
+		lineageTag: afce66f5-0030-5630-94d2-e479a3186b2e
+		summarizeBy: none
+		sourceColumn: tahun_id
+
+	column ihk
+		dataType: double
+		formatString: 0.00
+		lineageTag: 2361b906-c91d-5380-93f9-18b5bee0fbb0
+		summarizeBy: none
+		sourceColumn: ihk
+
+	column mtm_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8f79966e-f09c-5b0e-8c2a-e157d28b9463
+		summarizeBy: none
+		sourceColumn: mtm_persen
+
+	column ytd_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: 68a9dbdc-163f-5c67-b44d-7b68db0df341
+		summarizeBy: none
+		sourceColumn: ytd_persen
+
+	column yoy_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: cce2f98a-0f24-57a1-850e-04a21fe34fab
+		summarizeBy: none
+		sourceColumn: yoy_persen
+
+	partition fact_inflasi_bulanan = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\fact_inflasi_bulanan.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"bulan_key", Int64.Type}, {"tahun_id", Int64.Type}, {"ihk", type number}, {"mtm_persen", type number}, {"ytd_persen", type number}, {"yoy_persen", type number}})
+				in
+					ChangedType
+				```
