@@ -1,0 +1,58 @@
+table fact_inflasi_provinsi
+	lineageTag: 2a3de9cb-82df-5fcd-9d4c-aabba576bc5e
+
+	measure 'Provinsi YoY Tertinggi' =
+			MAX ( fact_inflasi_provinsi[yoy_persen] )
+		formatString: 0.00
+		lineageTag: 72a16fc7-7f0a-51d2-b3c9-7cc574ec60af
+
+	measure 'Inflasi YoY Wilayah' =
+			AVERAGE ( fact_inflasi_provinsi[yoy_persen] )
+		formatString: 0.00
+		lineageTag: 82376dd7-f455-5178-aff8-e2316b91bec4
+
+	column provinsi_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7233e421-381d-5260-b798-418c45360f8f
+		summarizeBy: none
+		sourceColumn: provinsi_id
+
+	column bulan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f2e4bb8-ccbe-589c-bf6f-5f751b0b579f
+		summarizeBy: none
+		sourceColumn: bulan_key
+
+	column ihk
+		dataType: double
+		formatString: 0.00
+		lineageTag: 13c6a651-d18e-5065-82f9-e03bceb88027
+		summarizeBy: none
+		sourceColumn: ihk
+
+	column yoy_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: b1b27870-db52-53cd-b75b-bfb59f1eb8e6
+		summarizeBy: none
+		sourceColumn: yoy_persen
+
+	column mtm_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7ee54e51-c8fe-5f0b-b642-5354d4ab0db2
+		summarizeBy: none
+		sourceColumn: mtm_persen
+
+	partition fact_inflasi_provinsi = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\fact_inflasi_provinsi.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"provinsi_id", Int64.Type}, {"bulan_key", Int64.Type}, {"ihk", type number}, {"yoy_persen", type number}, {"mtm_persen", type number}})
+				in
+					ChangedType
+				```
