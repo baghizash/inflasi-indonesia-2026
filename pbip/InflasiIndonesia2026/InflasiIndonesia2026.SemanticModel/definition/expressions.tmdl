@@ -1,0 +1,4 @@
+expression FolderData = ```
+		"C:\\PowerBI\\Inflasi\\data" meta [IsParameterQuery = true, IsParameterQueryRequired = true, Type = "Text"]
+		```
+	lineageTag: 1f6b9c30-39b2-51c8-970a-a3840c673756
